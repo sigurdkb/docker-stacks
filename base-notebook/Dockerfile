@@ -3,7 +3,7 @@
 
 # Ubuntu 18.04 (bionic)
 # https://hub.docker.com/_/ubuntu/?tab=tags&name=bionic
-ARG ROOT_CONTAINER=nvidia/cuda:10.2-cudnn7-devel
+ARG ROOT_CONTAINER=nvidia/cuda:10.1-cudnn7-devel
 ARG BASE_CONTAINER=$ROOT_CONTAINER
 FROM $BASE_CONTAINER
 

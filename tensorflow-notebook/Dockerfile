@@ -19,6 +19,6 @@ USER $NB_UID
 
 # Install Tensorflow
 RUN pip install --quiet \
-    'tensorflow-gpu==2.1.0' && \
+    'tensorflow-gpu==1.15.2' && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER

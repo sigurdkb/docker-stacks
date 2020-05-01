@@ -7,9 +7,9 @@ LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
 USER root
 
-# ffmpeg for matplotlib anim
+# ffmpeg for matplotlib anim & dvipng for latex labels
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ffmpeg && \
+    apt-get install -y --no-install-recommends ffmpeg dvipng && \
     rm -rf /var/lib/apt/lists/*
 
 USER $NB_UID
@@ -18,28 +18,32 @@ USER $NB_UID
 RUN conda install --quiet --yes \
     'beautifulsoup4=4.8.*' \
     'conda-forge::blas=*=openblas' \
-    'bokeh=1.4.*' \
-    'cloudpickle=1.2.*' \
+    'bokeh=2.0.*' \
+    'bottleneck=1.3.*' \
+    'cloudpickle=1.3.*' \
     'cython=0.29.*' \
-    'dask=2.9.*' \
+    'dask=2.14.*' \
     'dill=0.3.*' \
     'h5py=2.10.*' \
     'hdf5=1.10.*' \
     'ipywidgets=7.5.*' \
-    'matplotlib-base=3.1.*' \
+    'ipympl=0.5.*'\
+    'matplotlib-base=3.2.*' \
     'numba=0.48.*' \
     'numexpr=2.7.*' \
-    'pandas=0.25.*' \
+    'pandas=1.0.*' \
     'patsy=0.5.*' \
     'protobuf=3.11.*' \
+    'pytables=3.6.*' \
     'scikit-image=0.16.*' \
     'scikit-learn=0.22.*' \
     'scipy=1.4.*' \
-    'seaborn=0.9.*' \
+    'seaborn=0.10.*' \
     'sqlalchemy=1.3.*' \
     'statsmodels=0.11.*' \
     'sympy=1.5.*' \
     'vincent=0.4.*' \
+    'widgetsnbextension=3.5.*'\
     'xlrd' \
     && \
     conda clean --all -f -y && \
@@ -48,11 +52,12 @@ RUN conda install --quiet --yes \
     # Also activate ipywidgets extension for JupyterLab
     # Check this URL for most recent compatibilities
     # https://github.com/jupyter-widgets/ipywidgets/tree/master/packages/jupyterlab-manager
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager@^1.0.1 --no-build && \
-    jupyter labextension install jupyterlab_bokeh@1.0.0 --no-build && \
-    jupyter lab build && \
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager@^2.0.0 --no-build && \
+    jupyter labextension install @bokeh/jupyter_bokeh@^2.0.0 --no-build && \
+    jupyter labextension install jupyter-matplotlib@^0.7.2 --no-build && \
+    jupyter lab build -y && \
+    jupyter lab clean -y && \
     npm cache clean --force && \
-    rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/$NB_USER/.cache/yarn && \
     rm -rf /home/$NB_USER/.node-gyp && \
     fix-permissions $CONDA_DIR && \

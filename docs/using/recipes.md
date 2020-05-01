@@ -22,7 +22,7 @@ docker run -it -e GRANT_SUDO=yes --user root jupyter/minimal-notebook
 ```
 
 **You should only enable `sudo` if you trust the user and/or if the container is running on an
-isolated host.**
+isolated host.** See [Docker security documentation](https://docs.docker.com/engine/security/userns-remap/) for more information about running containers as `root`.
 
 ## Using `pip install` or `conda install` in a Child Docker image
 
@@ -112,7 +112,7 @@ ARG conda_env=python36
 ARG py_ver=3.6
 
 # you can add additional libraries you want conda to install by listing them below the first line and ending with "&& \"
-RUN conda env create --quiet --yes -p $CONDA_DIR/envs/$conda_env python=$py_ver ipython ipykernel && \
+RUN conda create --quiet --yes -p $CONDA_DIR/envs/$conda_env python=$py_ver ipython ipykernel && \
     conda clean --all -f -y
 
 # alternatively, you can comment out the lines above and uncomment those below
@@ -146,6 +146,39 @@ JupyterLab is preinstalled as a notebook extension starting in tag
 
 Run jupyterlab using a command such as
 `docker run -it --rm -p 8888:8888 jupyter/datascience-notebook start.sh jupyter lab`
+
+## Dask JupyterLab Extension
+
+[Dask JupyterLab Extension](https://github.com/dask/dask-labextension) provides a JupyterLab extension to manage Dask clusters, as well as embed Dask's dashboard plots directly into JupyterLab panes. Create the Dockerfile as:
+
+```dockerfile
+# Start from a core stack version
+FROM jupyter/scipy-notebook:latest
+
+# Install the Dask dashboard
+RUN pip install dask_labextension ; \
+    jupyter labextension install -y --clean \
+    dask-labextension
+
+# Dask Scheduler & Bokeh ports
+EXPOSE 8787
+EXPOSE 8786
+
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root"]
+```
+
+And build the image as:
+```
+docker build -t jupyter/scipy-dasklabextension:latest .
+```
+
+Once built, run using the command:
+```
+docker run -it --rm -p 8888:8888 -p 8787:8787 jupyter/scipy-dasklabextension:latest
+```
+
+Ref:
+[https://github.com/jupyter/docker-stacks/issues/999](https://github.com/jupyter/docker-stacks/issues/999)
 
 ## Let's Encrypt a Notebook server
 

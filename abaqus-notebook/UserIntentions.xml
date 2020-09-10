@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserIntentions mediaName="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" mediaVersion="422">
+  <SetVariable name="DSYWelcomePanel"/>
+  <!--EXALEAD CloudView-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="EXALEAD_CloudView.Linux64_1.2" name="SelectProduct" value="false"/>
+  <!--EXALEAD Search for Documentation-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="Search_Doc.Linux64_2.2" name="SelectProduct" value="false"/>
+  <!--Extended Product Documentation-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="DOC_SIM_EstPrd.AllOS_3.1" name="SelectProduct" value="false"/>
+  <!--FLEXnet License Server-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_Flexnet.Linux64_4.2" name="SelectProduct" value="false"/>
+  <!--SIMULIA Established Products-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_EstPrd.Linux64_5.2" name="SelectProduct" value="true"/>
+  <!--SIMULIA Established Products CAA API-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="CAA_SIMULIA_EstPrd.Linux64_6.2" name="SelectProduct" value="true"/>
+  <!--Isight-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_Isight.Linux64_7.2" name="SelectProduct" value="false"/>
+  <SetVariable item="flex" name="serverType_radioButton" value="true"/>
+  <SetVariable name="flexServer1" value="27012@piraya.uia.no"/>
+  <SetVariable name="flexServer2" value=""/>
+  <SetVariable name="flexServer3" value=""/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="commandsDir" value="/var/DassaultSystemes/SIMULIA/Commands"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="pluginsDir" value="/var/DassaultSystemes/SIMULIA/CAE/plugins/2020"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="solverAbaqus" name="checkSolverInterfaces" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="solverMscNastran" name="checkSolverInterfaces" value="false"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="solverAnsys" name="checkSolverInterfaces" value="false"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="solverFemfat" name="checkSolverInterfaces" value="false"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="interfaceAnsa" name="checkSolverInterfaces" value="false"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="workingDir" value="/usr/tmp"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="solverCcmpDir" value=""/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="solverCcmpPodkey" value=""/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="solverFluentDir" value=""/>
+  <SetVariable itId="SIMULIA_EstablishedProducts" name="TARGET_PATH" value="/usr/SIMULIA/EstProducts/2020"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMAQSL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMAQXL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMCSS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMODB_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMCAE_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMSAMP_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMTOSE_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMTOFE_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFESD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFS19_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFS18_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFS17_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFS16_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSMD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSMS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSTD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSAD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSID_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSRD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMFSND_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" item="CODE\linux_a64\SIMAQF_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_EstPrd.media" name="FinishPanel"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMAQSL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMAQXL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMCSS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMODB_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMCAE_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMSAMP_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMTOSE_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMTOFE_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFESD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFS19_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFS18_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFS17_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFS16_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSMD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSMS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSTD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSAD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSID_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSRD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMFSND_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" item="CAA\linux_a64\SIMAQF_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_EstPrd.media" name="FinishPanel"/>
+</UserIntentions>
